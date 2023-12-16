@@ -1,0 +1,53 @@
+@model CpPartOne.Models.Teacher
+@{
+    ViewBag.Title = "Edit Teacher";
+}
+
+@{ 
+    <!-- converting datetime object to only date in string, so input field can populate date -->
+    string date = Model.HireDate.ToString("yyyy-MM-dd");
+}
+
+<div class="top-container">
+    <a href="~/Teacher/list" class="back-link">Back to list</a>
+</div>
+    <div class="edit-teacher-container">
+
+        <h2>Edit info</h2>
+
+        <form method="POST" action="/Teacher/Update/@Model.TeacherId" id="editTeacherForm" class="form">
+
+            <!-- Input fields -->
+            <!-- for validation -->
+            <!-- using required for field which are compulsary to fill -->
+            <!-- using different input type like (number, text and date) to ensure that
+            user only write valid value type-->
+
+            <div>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="teacherFirstName" placeholder="Enter first name" value="@Model.TeacherFname" required />
+            </div>
+
+            <div>
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="teacherLastName" placeholder="Enter last name" value="@Model.TeacherLname" required />
+            </div>
+
+            <div>
+                <label for="employeeNumber">Employee Number</label>
+                <input type="text" id="employeeNumber" name="employeeNumber" placeholder="Enter employee number" value="@Model.EmployeeNumber" required />
+            </div>
+
+            <div>
+                <label for="hireDate">Hire Date</label>
+                <input type="date" id="hireDate" name="teacherHireDate" placeholder="Enter date of hiring" value="@date" required />
+            </div>
+
+            <div>
+                <label for="salary">Salary</label>
+                <input type="number" id="salary" name="teacherSalary" placeholder="Enter salary" value="@Model.Salary" required />
+            </div>
+
+            <input type="submit" value="Update" id="btnUpdate" />
+        </form>
+    </div>
