@@ -2,7 +2,7 @@
 
 ---
 ## Server render apges for update teacher
-![ServerRenderPage]((https://github.com/codeyumm/CpPartThree/blob/ab7d3254a6860cc11bd899521a2ced37bd04fe07/UpdateTeacher.png))
+![ServerRenderPage](https://github.com/codeyumm/CpPartThree/blob/ab7d3254a6860cc11bd899521a2ced37bd04fe07/UpdateTeacher.png)
 
 ## Server render pages for add teacher
 
